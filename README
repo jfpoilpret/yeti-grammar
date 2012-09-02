@@ -1,0 +1,8 @@
+This project is an attempt to define a grammar for Yeti functional programming language.
+Yeti currently misses an official and complete grammar.
+
+Defining such a grammar would bring the following benefits:
+
+- serve as reference documentation (or basis for such reference)
+- used to generate lexer and parser for yeti REPL and compiler, making future changes easier
+
