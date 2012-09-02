@@ -1,0 +1,55 @@
+// First check line comments
+/* Then check
+multiline
+comments */
+// check literals
+();
+12;
+'abcd';
+'ab''cd';
+"abcd";
+"ab'cd";
+"ab\"cd";
+"""ab"c"d""";
+// check lists
+[];
+[1];
+[1..10];
+[1..10, 20..30]
+// check variables
+a;
+a1;
+a_b;
+// check sections
+(+1);
+(1+);
+// check expressions
+1+2;
+1 `div` 2;
+f 1 2;
+f a b c;
+x < 10;
+x > 10;
+//TODO the following doesn't work but should
+//(1+2);
+//(1+2)*3;
+// check if construct
+if x then 1 else 2 fi;
+if x == 1 then 1 elif x > 10 then 2 else 3 fi;
+if x == 1 then x * 2 elif x == 2 then [1 .. x * 4] elif x == 3 then [] else x + 1 fi;
+// check case construct
+case x of _: "" esac;
+case x of []: "empty"; [z]: "singleton"; h::t: "other" esac;
+case x of []: "empty"; [z]: "singleton"; h::t: "other"; esac;
+// check bindings
+a = 1;
+b = a + 1;
+c = fn a b;
+// check variables
+var i = 1;
+i := i + 1;
+// check function declaration
+fn x y = x + y;
+// what else?
+// the last expression mustn't have a terminating ; according to the (current) grammar
+1
